@@ -1,0 +1,3 @@
+stloc_payline_homepage:
+    pattern:  /
+    defaults: { _controller: StlocPaylineBundle:Default:index }

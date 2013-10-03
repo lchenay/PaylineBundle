@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Payline demo</title>
+		{% stylesheets filter='cssrewrite'
+			'@StlocPaylineBundle/Resources/public/css/reset.css'
+			'@StlocPaylineBundle/Resources/public/css/style.css'
+			'@StlocPaylineBundle/Resources/public/css/header.css'
+			'@StlocPaylineBundle/Resources/public/css/forms.css'
+		 %}
+		<link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
+		{% endstylesheets %}
+		{% javascripts
+			'@StlocPaylineBundle/Resources/public/js/mootools-1.11.js'
+			'@StlocPaylineBundle/Resources/public/js/demos.js'
+		 %}
+		 <script type="text/javascript" src="{{ asset_url }}"></script>
+		 {% endjavascripts %}
+	</head>
+
+	<body onLoad="fillContractNumber('{{ paylineServiceOptions.CONTRACT_NUMBER }}')">
+		{# <?php include_once('scripts/geshi.php'); ?> #}
+
+		<div id="header">
+			<div id="header-inside">
+				<div id="logo">
+					<h1><a href="http://www.payline.com"><span>payline</span></a></h1>
+					<p>by Monext</p>
+				</div>
+				<ul id="menu">
+					{#<li><a href="index.php">Install</a></li>#}
+					<li><a href="{{ path('stloc_payline_homepage') }}" class="on">Web</a></li>
+					{#<li><a href="direct.php">Direct</a></li>
+					<li><a href="wallet.php">Wallet</a></li>
+					<li><a href="extended.php">Extended</a></li>#}
+				</ul>
+		  </div>
+		</div>
+
+		<div id="wrapper">
+			<div id="container">
+				<div id="content">
+					<h3 align="right">{{ paylineService.getKitVersion }}</h3>
+					<h2>Web Payment</h2>
+					{{ links|raw }}
+                    <p id="info">Demo that shows the usage of Payline webPayment API</p>
+                   
+
+					<div id="source">
+						<div id="demo">
+							{% include "StlocPaylineBundle:Default:doWebPaymentForm.html.twig" %}
+						</div>
+
+					</div>
+				</div>
+				<span class="clr"></span>
+			</div>
+		</div>
+
+		<div id="footer">
+			<div id="footer-inside">
+				<a href="http://www.monext.fr/" class="copy"></a>
+				<p>copyright &copy;2011 <a href="http://www.monext.fr/">Monext</a></p>
+			</div>
+		</div>
+
+	</body>
+</html>

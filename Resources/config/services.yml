@@ -1,0 +1,30 @@
+parameters:
+    payline.class: Stloc\Bundle\PaylineBundle\PaylineService
+    payline.options:
+        PAYMENT_CURRENCY: 978
+        ORDER_CURRENCY: 978
+        SECURITY_MODE: 
+        LANGUAGE_CODE: 
+        PAYMENT_ACTION: 101
+        PAYMENT_MODE: CPT
+        CANCEL_URL: http://
+        NOTIFICATION_URL: http://
+        RETURN_URL: http://
+        CUSTOM_PAYMENT_TEMPLATE_URL: 
+        CUSTOM_PAYMENT_PAGE_CODE: 
+        CONTRACT_NUMBER: ''
+        CONTRACT_NUMBER_LIST: 
+        SECOND_CONTRACT_NUMBER_LIST: 
+    payline.identification:
+        MERCHANT_ID: ''
+        ACCESS_KEY: 
+        PROXY_HOST: 
+        PROXY_PORT: 
+        PROXY_LOGIN: 
+        PROXY_PASSWORD: 
+        PRODUCTION: false
+
+services:
+    payline:
+        class: %payline.class%
+        arguments: [%payline.options%, %payline.identification%]
