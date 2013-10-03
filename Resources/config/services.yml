@@ -12,7 +12,7 @@ parameters:
         RETURN_URL: http://www.example.com/return3
         CUSTOM_PAYMENT_TEMPLATE_URL: 
         CUSTOM_PAYMENT_PAGE_CODE: 
-        CONTRACT_NUMBER: '0360981'
+        CONTRACT_NUMBER: '0011223'
         CONTRACT_NUMBER_LIST: 
         SECOND_CONTRACT_NUMBER_LIST: 
     payline.identification:
