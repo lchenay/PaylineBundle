@@ -7,17 +7,17 @@ parameters:
         LANGUAGE_CODE: 
         PAYMENT_ACTION: 101
         PAYMENT_MODE: CPT
-        CANCEL_URL: http://
-        NOTIFICATION_URL: http://
-        RETURN_URL: http://
+        CANCEL_URL: http://www.example.com/return1
+        NOTIFICATION_URL: http://www.example.com/return2
+        RETURN_URL: http://www.example.com/return3
         CUSTOM_PAYMENT_TEMPLATE_URL: 
         CUSTOM_PAYMENT_PAGE_CODE: 
-        CONTRACT_NUMBER: ''
+        CONTRACT_NUMBER: '0360981'
         CONTRACT_NUMBER_LIST: 
         SECOND_CONTRACT_NUMBER_LIST: 
     payline.identification:
-        MERCHANT_ID: ''
-        ACCESS_KEY: 
+        MERCHANT_ID: '11223344556677'
+        ACCESS_KEY: YourAccesKey
         PROXY_HOST: 
         PROXY_PORT: 
         PROXY_LOGIN: 
@@ -28,3 +28,4 @@ services:
     payline:
         class: %payline.class%
         arguments: [%payline.options%, %payline.identification%]
+#        arguments: [@service_id, "plain_value", %parameter%]
