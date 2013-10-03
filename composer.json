@@ -3,7 +3,7 @@
     "type": "symfony-bundle",
     "description": "Symfony PaylineBundle",
     "keywords": ["Payline"],
-    "homepage": "http://www.payline.com",
+    "homepage": "unofficial http://www.payline.com",
     "license": "MIT",
     "authors": [
         {
@@ -11,7 +11,7 @@
             "email": "laurent.guigo@gmail.com"
         },
         {
-            "name": "Payline by MONEXT",
+            "name": "unofficial Payline by MONEXT",
             "homepage": "http://www.payline.com"
         }
     ],
