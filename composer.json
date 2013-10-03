@@ -3,7 +3,6 @@
     "type": "symfony-bundle",
     "description": "Symfony PaylineBundle",
     "keywords": ["Payline"],
-    "homepage": "unofficial http://www.payline.com",
     "license": "MIT",
     "authors": [
         {
