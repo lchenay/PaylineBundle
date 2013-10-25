@@ -15,7 +15,11 @@
         }
     ],
     "require": {
-        "php": ">=5.3.0"
+        "php": ">=5.3.0",
+        "ext-curl": "*",
+        "ext-http": "*",
+        "ext-openssl": "*",
+        "ext-soap" : "*"
     },
     "autoload": {
         "psr-0": { "Stloc\\Bundle\\PaylineBundle": "" }
